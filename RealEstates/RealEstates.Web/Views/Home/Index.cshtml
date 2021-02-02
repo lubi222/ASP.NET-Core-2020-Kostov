@@ -1,0 +1,28 @@
+﻿@using RealEstates.Models
+@model IEnumerable<RealEstates.Services.Models.DistrictViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<table>
+    <tr>
+        <th>District</th>
+        <th>Avg. price</th>
+        <th>Min price</th>
+        <th>Max price</th>
+    </tr>
+    @foreach (var district in this.Model)
+    {
+        <tr>
+            <th>@district.Name</th>
+            <th>@district.AveragePrice</th>
+            <th>@district.MaxPrice</th>
+            <th>@district.MinPrice</th>
+        </tr>
+    }
+</table>

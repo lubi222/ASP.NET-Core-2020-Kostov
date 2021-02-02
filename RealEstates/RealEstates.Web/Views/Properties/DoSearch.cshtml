@@ -1,0 +1,23 @@
+﻿@model IEnumerable<RealEstates.Services.Models.PropertyViewModel>
+<h1>Search results</h1>
+<table class="table table-sm table-striped">
+    <th>District</th>
+    <th>BuildingType</th>
+    <th>PropertyType</th>
+    <th>Price</th>
+    <th>Year</th>
+    <th>Size</th>
+    <th>Floor</th>
+    @foreach (var property in this.Model)
+    {
+        <tr>
+            <td>@property.District</td>
+            <td>@property.BuildingType</td>
+            <td>@property.PropertyType</td>
+            <td>@property.Price</td>
+            <td>@property.Year</td>
+            <td>@property.Size</td>
+            <td>@property.Floor</td>
+        </tr>
+    }
+</table>
